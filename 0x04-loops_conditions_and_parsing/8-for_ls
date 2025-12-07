@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script lists visible files and displays only the part after the first dash
+for file in *; do
+  if [ -e "$file" ]; then
+    # Use parameter expansion to remove up to first dash
+    echo "${file#*-}"
+  fi
+done
